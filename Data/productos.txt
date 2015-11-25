@@ -1,0 +1,7 @@
+100|Blusa Armani|100000|0|Tallas S M L
+200|Jeans Diesel|200000|1|Tallas 6 8 10 12 
+300|Relog Mulco|800000|2|Garantia 1 Año
+400|Collar Oro 18K|2000000|2|Garantia de por vida
+500|Zapatos Azaleia|100000|1|Tallas 35 36 37 38 39 40
+600|Blusa tennis|10000|0|Tallas 6,8,9
+700|hklhjk|1212|0|

@@ -1,0 +1,3 @@
+luis|Luis|zapata|1234|1
+diego|Diego|Suares|1234|2
+jorge|jorge|londoño|123|2

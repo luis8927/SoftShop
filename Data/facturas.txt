@@ -1,0 +1,5 @@
+1|1|1010|Hernando Jaramillo|2014/11/24
+2|100|Blusa Armani|100000|2|200000
+2|200|Jeans Diesel|200000|2|400000
+2|300|Relog Mulco|800000|2|1600000
+2|400|Collar Oro 18K|2000000|2|4000000
