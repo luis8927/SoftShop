@@ -3,8 +3,9 @@ package clases;
 
 import java.util.Date;
 /**
- * 
- * @author sala115
+ * Esta clase define el formulario cliente
+ * @author LUISFERNANDO
+ * @version 1.0
  */
 
 public class Cliente {
@@ -18,6 +19,18 @@ public class Cliente {
 	private Date fechaNacimiento;
 	private Date fechaIngreso;
 
+        /**
+         * Aqui se generan los parametros de la clase cliente
+         * @param idCliente
+         * @param idTipo
+         * @param nombres
+         * @param apellidos
+         * @param direccion
+         * @param telefono
+         * @param ciudad
+         * @param fechaNacimiento
+         * @param fechaIngreso 
+         */
     public Cliente(String idCliente, int idTipo, String nombres, String apellidos, String direccion, String telefono, int ciudad, Date fechaNacimiento, Date fechaIngreso) {
         this.idCliente = idCliente;
         this.idTipo = idTipo;
@@ -29,55 +42,94 @@ public class Cliente {
         this.fechaNacimiento = fechaNacimiento;
         this.fechaIngreso = fechaIngreso;
     }
-
+/**
+ * Este es el get para obtener datos de la variable cliente 
+ * @return 
+ */
     public String getIdCliente() {
         return idCliente;
     }
-
+/**
+ * Este es el set para inicializar la variable cliente
+ * @param idCliente 
+ */
     public void setIdCliente(String idCliente) {
         this.idCliente = idCliente;
     }
-
+/**
+ * Este es el get para obtener datos de la variable IdTipo
+ * @return 
+ */
     public int getIdTipo() {
         return idTipo;
     }
-
+/**
+ * Este es el set para inicializar  los datos del parametro idTipo
+ * @param idTipo 
+ */ 
     public void setIdTipo(int idTipo) {
         this.idTipo = idTipo;
     }
-
+/**
+ * Este es el get para obtener datos de la variable Nombres
+ * @return 
+ */
     public String getNombres() {
         return nombres;
     }
-
+/**
+ * Este es el set para inicializar los datos del parametro nombres
+ * @param nombres 
+ */
     public void setNombres(String nombres) {
         this.nombres = nombres;
     }
-
+/**
+ * Este es el get para obtener datos de la variable Apellidos
+ * @return 
+ */
     public String getApellidos() {
         return apellidos;
     }
-
+/**
+ * Este es el set para inicializar los datos del parametro apellidos
+ * @param apellidos 
+ */
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
-
+/**
+ * Este es el get para obtener datos de la variable Direccion
+ * @return 
+ */
     public String getDireccion() {
         return direccion;
     }
-
+/**
+ * Este es el set para inicializar los datos del parametro direccion
+ * @param direccion 
+ */
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-
+/**
+ * Este es el get para obtener datos de la variable telefono
+ * @return 
+ */
     public String getTelefono() {
         return telefono;
     }
-
+/**
+ * Este es el set para inicializar los datos del parametro Telefono
+ * @param telefono 
+ */
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-
+/**
+ * 
+ * @return 
+ */
     public int getCiudad() {
         return ciudad;
     }
