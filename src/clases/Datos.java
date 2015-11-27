@@ -9,7 +9,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Date;
 
-
+/**
+ * Esta es la clase donde se guardan los datos de la tabla
+ * @author LUISFERNANDO
+ * @version 1.0
+ */
 public final class Datos {
     private final int maxUsu = 50;
     private final int maxPro = 100;
@@ -21,8 +25,8 @@ public final class Datos {
     private int conPro = 0;
     private int conCli = 0;
     private int numFac = 0;
-   
-    
+  
+     
     public Datos(){
         //Cargamos Usuarios
         cargarUsuarios();
@@ -38,41 +42,72 @@ public final class Datos {
         cargarConfiguracion();
     }
      
-    
+  /**
+   * Este es el get para obtener datos de la variable numFac
+   * @return 
+   */  
     public int getNumFac() {
         return numFac;
     }
-    
+  /**
+   * Este es el set para inicializar los datos de la variable numFac y recibirla como un entero
+   * @param numFac 
+   */  
     public void setNumFac(int numFac) {
         this.numFac = numFac;
     }
-    
+   /**
+    * Este retorna la cantidad de usuarios
+    * @return 
+    */ 
     public int numeroUsuarios() {
 	return conUsu;
 		
     }
-    
+    /**
+     * Este retorna la cantidad de Productos
+     * @return 
+     */
      public int numeroProductos() {
 	return conPro;
                                 
     }
-    
+    /**
+     * Este retorna la cantidad de Clientes
+     * @return 
+     */
     public int numeroClientes() {
 	return conCli;
 		
     } 
+    /**
+     * Este es el get para obtener datos de la variable Usuarios
+     * @return 
+     */
     public  Usuario[] getUsuarios() {
         return misUsuarios;
     }
-    
+    /**
+     * Este es el get para obtener datos de la variable Productos
+     * @return 
+     */
     public  Producto[] getProductos() {
         return misProductos;
     }
-    
+    /**
+     * Este es el get para obtener datos de la variable Clientes
+     * @return 
+     */
     public  Cliente[] getClientes() {
         return misClientes;
     }
     
+    /**
+     * Aqui se hace la validacion del usuario
+     * @param usuario
+     * @param clave
+     * @return 
+     */
     public boolean validarUsuario(String usuario, String clave) {
         boolean aux  = false;
         for(int i = 0; i < conUsu; i++){
@@ -84,7 +119,11 @@ public final class Datos {
         }
         return false;
     }
-    
+    /**
+     * Aqui se hace una comparacion de datos ingresados y luego mostrarlas
+     * @param usuario
+     * @return 
+     */
     public int getPerfil(String usuario) {
      
         for(int i = 0; i < conUsu; i++) {
@@ -96,7 +135,11 @@ public final class Datos {
         }
         return -1;
     }
-    
+    /**
+     * Aqui se hace guarda el cambio de clave 
+     * @param usuario
+     * @param clave 
+     */
     public void cambioClave(String usuario, String clave ) {
      
         for(int i = 0; i < conUsu; i++) {
@@ -108,7 +151,11 @@ public final class Datos {
         }
         
     }
-    
+    /**
+     * Aqui se sabe en que posicion esta el usuario creado
+     * @param usuario
+     * @return 
+     */
     public int posicionUsuario(String usuario) {
         for(int i = 0; i < conUsu; i++) {
             if(misUsuarios[i].getIdUsuario().equals(usuario))  {
@@ -118,7 +165,11 @@ public final class Datos {
         }
         return -1;
     }
-    
+    /**
+     * retorna la posicion en la que se escuentra el producto
+     * @param producto
+     * @return 
+     */
     public int posicionProducto(String producto) {
         for(int i = 0; i < conPro; i++) {
             if(misProductos[i].getIdProducto().equals(producto))  {
@@ -128,7 +179,11 @@ public final class Datos {
         }
         return -1;
     }
-    
+    /**
+     * Retorna la posicion en la que se encuentra el cliente
+     * @param cliente
+     * @return 
+     */
     public int posicionCliente(String cliente) {
         for(int i = 0; i < conCli; i++) {
             if(misClientes[i].getIdCliente().equals(cliente))  {
@@ -138,6 +193,11 @@ public final class Datos {
         }
         return -1;
     }
+    /**
+     * Retorna un mensaje en caso de que llegue al numero maximo de usuarios o agregue el usuario 
+     * @param miUsuario
+     * @return 
+     */
     public String agregarUsuario(Usuario miUsuario) {
         if(conUsu == maxUsu) {
             return "Se alcanzado el numero maximo de usuarios";
@@ -148,7 +208,11 @@ public final class Datos {
 		conUsu++;
 		return "Usuario agregado correctamente";
     }
-    
+    /**
+     * Retorna un mensaje en caso de que llegue al numero maximo de productos o agregue el producto
+     * @param miProducto
+     * @return 
+     */
      public String agregarProducto(Producto miProducto) {
         if(conPro == maxPro) {
             return "Se alcanzado el numero maximo de productos";
@@ -159,7 +223,11 @@ public final class Datos {
 		conPro++;
 		return "Producto agregado correctamente";
     }
-     
+     /**
+      * Retorna un mensaje en caso de que llegue al numero maximo de clientes o agregue el cliente
+      * @param miCliente
+      * @return 
+      */
       public String agregarCliente(Cliente miCliente) {
         if(conCli == maxCli) {
             return "Se alcanzado el numero maximo de clientes";
@@ -170,7 +238,12 @@ public final class Datos {
 		conCli++;
 		return "Cliente agregado correctamente";
     }
-    
+    /**
+     * Retorna un mensaje en donde el usuario ha sido modificado correctamente
+     * @param miUsuario
+     * @param pos
+     * @return 
+     */
     public String modificarUsuario(Usuario miUsuario, int pos) {
 		misUsuarios[pos].setNombres(miUsuario.getNombres());
 		misUsuarios[pos].setApellidos(miUsuario.getApellidos());
@@ -179,7 +252,12 @@ public final class Datos {
 		return "Usuario modificado correctamente";
 		
 	}
-    
+    /**
+     * Retorna un mensaje en donde el producto ha sido modificado correctamente
+     * @param miProducto
+     * @param pos
+     * @return 
+     */
     public String modificarProducto(Producto miProducto, int pos) {
 		misProductos[pos].setDescripcion(miProducto.getDescripcion());
 		misProductos[pos].setPrecio(miProducto.getPrecio());
@@ -188,7 +266,12 @@ public final class Datos {
 		return "Producto modificado correctamente";
 		
 	}
-    
+    /**
+     * Retorna un mensaje en donde el cliente ha sido modificado correctamente
+     * @param miCliente
+     * @param pos
+     * @return 
+     */
     public String modificarCliente(Cliente miCliente, int pos) {
 		misClientes[pos].setIdTipo(miCliente.getIdTipo());	
 		misClientes[pos].setNombres(miCliente.getNombres());
@@ -200,7 +283,11 @@ public final class Datos {
 		misClientes[pos].setFechaIngreso(miCliente.getFechaIngreso());
 		return "Cliente modificado correctamente";
     }
-    
+    /**
+     * Retorna un mensaje en donde el usuario ha sido borrado correctamente
+     * @param pos
+     * @return 
+     */
     	public String borrarUsuario(int pos) {
 		for(int i = pos; i < conUsu - 1; i++) {
 			misUsuarios[i] = misUsuarios[i + 1];
@@ -208,7 +295,11 @@ public final class Datos {
 		conUsu--;
 		return "Usuario borrado correctamente";
 	}
-        
+       /**
+        * Retorna un mensaje en donde el producto ha sido borrado correctamente
+        * @param pos
+        * @return 
+        */ 
         public String borrarProducto(int pos) {
 		for(int i = pos; i < conPro - 1; i++) {
 			misProductos[i] = misProductos[i + 1];
@@ -216,7 +307,11 @@ public final class Datos {
 		conPro--;
 		return "Producto borrado correctamente";
 	}
-        
+        /**
+         * Retorna un mensaje en donde el cliente ha sido borrado correctamente
+         * @param pos
+         * @return 
+         */
         public String borrarCliente(int pos) {
 		for(int i = pos; i < conCli - 1; i++) {
 			misClientes[i] = misClientes[i + 1];
@@ -224,14 +319,18 @@ public final class Datos {
 		conCli--;
 		return "Cliente borrado correctamente";
 	}
-        
+        /**
+         * Guarda todo lo ingresado
+         */
         public void grabarTodo() {
             grabarUsuarios();
             grabarClientes();
             grabarProductos();
             grabarConfiguracion();
         }
-        
+        /**
+         * Creacion de un txt de usuarios para archivos planos
+         */
         public void grabarUsuarios() {
             FileWriter fw = null;
             PrintWriter pw = null;
@@ -253,6 +352,9 @@ public final class Datos {
                 }
             }      
         }
+        /**
+         * Creacion de un txt de clientes para archivos planos
+         */
         public void grabarClientes() {
            FileWriter fw = null;
             PrintWriter pw = null;
@@ -274,6 +376,9 @@ public final class Datos {
                 }
             }       
         }
+        /**
+         * Creacion de un txt de productos para archivos planos
+         */
         public void grabarProductos() {
             FileWriter fw = null;
             PrintWriter pw = null;
@@ -295,6 +400,9 @@ public final class Datos {
                 }
             }      
         }
+        /**
+         * Creacion de un ini de configuracion para archivos planos
+         */
         public void grabarConfiguracion() {
             FileWriter fw = null;
             PrintWriter pw = null;
@@ -317,6 +425,9 @@ public final class Datos {
                 }
             }      
         }
+        /**
+         * 
+         */
         public void cargarUsuarios() {
             File archivo = null;
             FileReader fr = null;
@@ -380,6 +491,9 @@ public final class Datos {
             }
             
       }
+        /**
+         * Carga los productos encontrados de un txt de productos en archivos planos
+         */
     public void cargarProductos() {
             File archivo = null;
             FileReader fr = null;
@@ -442,6 +556,9 @@ public final class Datos {
                 }
             }
     }
+    /**
+     * Carga los clientes  encontrados de un txt de clientes en archivos planos
+     */
           public void cargarClientes() {
             File archivo = null;
             FileReader fr = null;
@@ -534,7 +651,9 @@ public final class Datos {
             }
             
       } 
-     
+     /**
+      * Carga la configuracion encontrados de un ini de configuracion en archivos planos
+      */
      public void cargarConfiguracion() {
             File archivo = null;
             FileReader fr = null;
