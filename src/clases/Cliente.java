@@ -127,33 +127,51 @@ public class Cliente {
         this.telefono = telefono;
     }
 /**
- * 
+ * Este es el get para obtener datos de la variable Ciudad
  * @return 
  */
     public int getCiudad() {
         return ciudad;
     }
-
+/**
+ * Este es el set para inicializar los datos del parametro ciudad
+ * @param ciudad 
+ */
     public void setCiudad(int ciudad) {
         this.ciudad = ciudad;
     }
-
+/**
+ * Este es el get para obtener datos de la variable FechaNacimiento
+ * @return 
+ */
     public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
-
+/**
+ * Este es el set para inicializar los datos del parametro fechaNacimiento
+ * @param fechaNacimiento 
+ */
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
-
+/**
+ * Este es el get para obtener datos de la variable FechaIngreso
+ * @return 
+ */
     public Date getFechaIngreso() {
         return fechaIngreso;
     }
-
+/**
+ * Este es el set para inicializar los datos de la variable fechaIngreso
+ * @param fechaIngreso 
+ */
     public void setFechaIngreso(Date fechaIngreso) {
         this.fechaIngreso = fechaIngreso;
     }
-    
+/**
+ * Este retorna todos los datos de la clase
+ * @return 
+ */    
      @Override
         public String toString() {
         return idCliente + "|"

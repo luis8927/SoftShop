@@ -652,7 +652,7 @@ public final class Datos {
             
       } 
      /**
-      * Carga la configuracion encontrados de un ini de configuracion en archivos planos
+      * Carga la configuracion encontrados de un ini de configuracion en archivos planos.
       */
      public void cargarConfiguracion() {
             File archivo = null;
