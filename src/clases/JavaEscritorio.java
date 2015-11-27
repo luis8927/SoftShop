@@ -5,7 +5,7 @@ import formularios.frmLogin;
 /**
  * Esta es la clase principal JavaEscritorio
  * @author LUISFERNANDO
- * @version 
+ * @version 1.0
  */
 public class JavaEscritorio {
 
