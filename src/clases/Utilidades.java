@@ -83,7 +83,7 @@ public class Utilidades {
         return booleano; 
         } 
         /**
-         * Objeto.
+         * Objeto..
          * @param Obj
          * @return 
          */
