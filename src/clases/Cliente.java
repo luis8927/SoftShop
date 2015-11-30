@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Esta clase define el formulario cliente
  * @author LUISFERNANDO
- * @version 1.0
+ * @version 1.0.
  */
 
 public class Cliente {
