@@ -13,6 +13,7 @@ import java.util.Date;
  * Esta es la clase donde se guardan los datos de la tabla
  * @author LUISFERNANDO
  * @version 1.0
+ * 
  */
 public final class Datos {
     private final int maxUsu = 50;
@@ -652,7 +653,7 @@ public final class Datos {
             
       } 
      /**
-      * Carga la configuracion encontrados de un ini de configuracion en archivos planos.
+      * Carga la configuracion encontrados de un ini de configuracion en archivos planos..
       */
      public void cargarConfiguracion() {
             File archivo = null;
