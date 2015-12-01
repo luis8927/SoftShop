@@ -73,6 +73,9 @@ public class frmPrincipal extends javax.swing.JFrame {
         mnuAyuda = new javax.swing.JMenu();
         mnuAyudaAcercaDe = new javax.swing.JMenuItem();
         mnuAyudaAyuda = new javax.swing.JMenuItem();
+        mnuAyuda1 = new javax.swing.JMenu();
+        mnuAyudaAcercaDe1 = new javax.swing.JMenuItem();
+        mnuAyudaAyuda1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sistema de Facturacióm");
@@ -193,6 +196,24 @@ public class frmPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuAyuda);
 
+        mnuAyuda1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ayuda3.png"))); // NOI18N
+        mnuAyuda1.setText("Soporte");
+
+        mnuAyudaAcercaDe1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/AcercaDE2.png"))); // NOI18N
+        mnuAyudaAcercaDe1.setText("Documentación");
+        mnuAyudaAcercaDe1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuAyudaAcercaDe1ActionPerformed(evt);
+            }
+        });
+        mnuAyuda1.add(mnuAyudaAcercaDe1);
+
+        mnuAyudaAyuda1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Ayuda3.png"))); // NOI18N
+        mnuAyudaAyuda1.setText("Sporte Tecnico");
+        mnuAyuda1.add(mnuAyudaAyuda1);
+
+        jMenuBar1.add(mnuAyuda1);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -275,6 +296,10 @@ public class frmPrincipal extends javax.swing.JFrame {
         miFactura.show();
     }//GEN-LAST:event_mnuMovimientoNuevaFacturaActionPerformed
 
+    private void mnuAyudaAcercaDe1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAyudaAcercaDe1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnuAyudaAcercaDe1ActionPerformed
+
     
     /**
      * @param args the command line arguments
@@ -322,8 +347,11 @@ public class frmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem mnuArchivoSalir;
     private javax.swing.JMenuItem mnuArchivoUsuarios;
     private javax.swing.JMenu mnuAyuda;
+    private javax.swing.JMenu mnuAyuda1;
     private javax.swing.JMenuItem mnuAyudaAcercaDe;
+    private javax.swing.JMenuItem mnuAyudaAcercaDe1;
     private javax.swing.JMenuItem mnuAyudaAyuda;
+    private javax.swing.JMenuItem mnuAyudaAyuda1;
     private javax.swing.JMenu mnuMovimiento;
     private javax.swing.JMenuItem mnuMovimientoNuevaFactura;
     private javax.swing.JMenuItem mnuMovimientoReporteFactura;
