@@ -142,7 +142,7 @@ public class Cliente {
     }
 /**
  * Este es el get para obtener datos de la variable FechaNacimiento
- * @return 
+ * @return fecha de nacimiento
  */
     public Date getFechaNacimiento() {
         return fechaNacimiento;
